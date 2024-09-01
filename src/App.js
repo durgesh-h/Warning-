@@ -22,7 +22,7 @@ function App() {
       requestFullScreen();
 
       // Play siren sound
-      const siren = new Audio('/siren.mp3');
+      const siren = new Audio('./Bikhra_-_Ringtone__download_Link_%F0%9F%91%87__SH_Beats(128k).mp3');
       siren.loop = true;
       siren.play();
 
