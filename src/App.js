@@ -22,7 +22,7 @@ function App() {
       requestFullScreen();
 
       // Play siren sound
-      const siren = new Audio('/Bikhra_-_Ringtone__download_Link_%F0%9F%91%87__SH_Beats(128k).mp3');
+      const siren = new Audio('/siren.mp3');
       siren.loop = true;
       siren.play();
 
@@ -79,18 +79,14 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-red-600 text-white text-center p-4">
+    <div className="container">
       {isPrankActive && (
-        <div>
-          <h1 className="text-4xl font-bold mb-8">Due to your inappropriate searches, we banned you from the internet!</h1>
-          <p className="text-2xl mb-8">Pay the fine to remove this ban.</p>
-          <p className="text-sm">Press the secret button (top right corner) to close this screen.</p>
+        <div className="content">
+          <h1>Due to your inappropriate searches, we banned you from the internet!</h1>
+          <p>Pay the fine to remove this ban.</p>
+          <p>Press the secret button (top right corner) to close this screen.</p>
           {/* Secret button for mobile */}
-          <button
-            onClick={closePrank}
-            className="absolute top-2 right-2 p-2 bg-transparent text-transparent"
-            aria-label="Close Prank"
-          >
+          <button onClick={closePrank} className="secret-button" aria-label="Close Prank">
             Secret Button
           </button>
         </div>
